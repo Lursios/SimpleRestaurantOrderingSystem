@@ -2,6 +2,7 @@
 Built with Tailwind CSS & Next Js 14 with Mobile First Approach Design Principle. Made for a screening process to land a job which failed 
 
 This is how it look for at first : 
+https://youtu.be/DhoUOehX2tQ
 
 
 I have only two weeks never used next js, typescript or tailwind and my react was ok but not great and i didn't know that there's a library for everything in react.
