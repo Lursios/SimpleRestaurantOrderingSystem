@@ -2,9 +2,7 @@
 const nextConfig = {
     experimental: {
         serverComponentsExternalPackages: ['sequelize'],
-        serverActions: true,
       },
-      reactStrictMode: false
 }
 
 module.exports = nextConfig
