@@ -1,5 +1,5 @@
 import { Kasir } from "./Kasir";
-import { fetchTableOrderData } from "../../../service/dbService";
+import { fetchTableOrderData } from "../../../../service/dbService";
 
 
 export default async function Cashier() {
