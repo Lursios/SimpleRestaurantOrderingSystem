@@ -1,4 +1,7 @@
-import Menus from "@/components/Menus";
+import Dishes from "@/components/customerPanel/Dishes";
+import Menus from "@/components/customerPanel/Menus";
+import { LuSoup } from "react-icons/lu";
+import { PiIceCreamLight } from "react-icons/pi";
 // import Order from "./OrderButton";
 // import { fetchOrders,fetchMenus,fetchOrder} from "../../../service/dbService";
 // import OrderSection from "./OrderSection";
@@ -55,24 +58,42 @@ import Menus from "@/components/Menus";
 
 const Order = ()=> {
 
-  const fetchMenus = [
-    {name:"Bakmi",price:"Yes"},
-    {name:"Bakmi",price:"Yes"},
+  const dishesIconSize = "3rem"
+  const fetchedMenus = [
+    {name:"Bakmi",price:"12k"},
+    {name:"Bakmi",price:"15k"},
     {name:"Bakmi",price:"Yes"},
     {name:"Bakmi",price:"Yes"},
     {name:"Bakmi",price:"Yes"},
   ]
 
+  const fetchedDishes = [
+    {name:"Soup",imgLoc: <LuSoup size={dishesIconSize}/>},
+    {name:"Main Dish",imgLoc: <LuSoup size={dishesIconSize}/>},
+    {name:"Dessert",imgLoc: <PiIceCreamLight size={dishesIconSize}/>},
+    {name:"Drinks",imgLoc: <LuSoup size={dishesIconSize}/>},
+    {name:"Snacks",imgLoc: <LuSoup size={dishesIconSize}/>}
+  ]
+
   return (
-    <div className="grid grid-cols-3 w-full text-center">
-      {fetchMenus.map((menu,index)=> (
-        <Menus
-          key={`${index}-${menu.name}`}
-          menuName = {menu.name}
-          menuPrice = {menu.price}
-        />
-      ))}
+    <div className="flex flex-col gap-20 mt-4 w-full">
+      <Dishes
+        dishes = {fetchedDishes}
+      />
+      <div className="grid grid-cols-3 w-full text-center">
+        {fetchedMenus.map((menu,index)=> (
+          <Menus
+            key={`${index}-${menu.name}`}
+            menuName = {menu.name}
+            menuPrice = {menu.price}
+          />
+        ))}
+      </div>
+      <div>
+        this is for the floating payment
+      </div>
     </div>
+
   )
 }
 

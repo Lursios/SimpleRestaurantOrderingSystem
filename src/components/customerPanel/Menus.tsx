@@ -1,5 +1,4 @@
 
-
 type MenusProps = {
     menuName:string;
     menuPrice:string;
@@ -7,7 +6,7 @@ type MenusProps = {
 
 const Menus = ({menuName,menuPrice}:MenusProps)=> {
     return (
-        <div>
+        <div className="bg-white text-black">
             <h1>{menuName}</h1>
             <h1>{menuPrice}</h1>
         </div>
