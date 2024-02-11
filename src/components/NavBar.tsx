@@ -38,7 +38,7 @@ import { FaFileInvoiceDollar } from "react-icons/fa6";
 
 const CustomerNavbar = ()=> {
     return (
-        <div className="flex flex-row items-center justify-center w-full bg-green-500 gap-20">
+        <div className="flex flex-row items-center justify-center w-full h-[10%] bg-green-500 gap-20">
             <h1>Logo Menu</h1>
             <Link href={"/adminPanel"}>CabeIjoGroupLogo</Link>
             <h1>SearchLogo</h1>
